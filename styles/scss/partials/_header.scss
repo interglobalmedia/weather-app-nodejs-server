@@ -1,0 +1,19 @@
+.header-nav {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin: 1.5rem auto;
+    padding-left: 0.75rem;
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo-wrapper {
+        font-size: 1.3rem;
+        color: rgba(118, 91, 255, 1);
+    }
+
+    a {
+        color: rgba(255, 0, 173, 1);
+        margin-right: 0.5rem;
+    }
+}

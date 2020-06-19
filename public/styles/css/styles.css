@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  color: black;
+  font-family: 'Overpass', sans-serif; }
+
+.info {
+  width: 90%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f18fd1; }
+
+.header-nav {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin: 1.5rem auto;
+  padding-left: 0.75rem;
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: space-between; }
+  .header-nav .logo-wrapper {
+    font-size: 1.3rem;
+    color: #765bff; }
+  .header-nav a {
+    color: #ff00ad;
+    margin-right: 0.5rem; }
+
+/* Sticky Footer Styling */
+:root {
+  --space: 1.5em 0;
+  --space: 2em 0; }
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.Site-content {
+  flex: 1 0 auto;
+  padding: var(--space) var(--space) 0;
+  width: 100%; }
+
+.Site-content:after {
+  content: '\00a0';
+  display: block;
+  margin-top: var(--space);
+  height: 0;
+  visibility: hidden; }
+
+.footer-wrapper {
+  display: flex;
+  margin: 0 auto; }
+  .footer-wrapper .site-footer {
+    text-align: center; }
+
+.about-image {
+  width: 100%;
+  max-width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
