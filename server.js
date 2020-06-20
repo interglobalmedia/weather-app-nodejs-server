@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const env = require('./config/env')
 const app = express()
 const port = env.PORT || 3000
+const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
 
 // set up static directory to serve
 const publicDirectoryPath = path.join(__dirname, 'public')
@@ -43,9 +45,42 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
+    if (!req.query.address) {
+        return res.send({
+            error: 'You must provide an address!',
+        })
+    }
+    geocode(
+        req.query.address,
+        (error, { latitude, longitude, location } = {}) => {
+            if (error) {
+                return res.send({ error })
+            }
+
+            forecast(latitude, longitude, (error, forecastData) => {
+                if (error) {
+                    return res.send({ error })
+                }
+
+                res.send({
+                    forecast: forecastData,
+                    location,
+                    address: req.query.address,
+                })
+            })
+        }
+    )
+})
+
+app.get('/products', (req, res) => {
+    console.log(req.query.search)
+    if (!req.query.search) {
+        return res.send({
+            error: 'You must provide a search term.',
+        })
+    }
     res.send({
-        forecast: `Cloudy`,
-        location: `New York`,
+        products: [],
     })
 })
 
