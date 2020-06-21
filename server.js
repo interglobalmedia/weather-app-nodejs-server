@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.render('pages/index', {
         title: 'Weather',
         name: 'Maria D. Campbell',
-        message: 'Use this site to get your weather updates!',
+        message: 'Get your weather updates here!',
     })
 })
 // about route
