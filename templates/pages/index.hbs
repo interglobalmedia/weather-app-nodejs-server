@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{{>indexHead}}
+{{>head}}
 
 <body class="Site">
     <div class="Site-content">
         {{>header}}
-        <p class="info">{{message}}</p>
+        <div class="wrapper">
+            <p class="weather-info">{{message}}</p>
+            <form type="submit" id="search">
+
+                <input id="weather-input" type="text" placeholder="search location" autofocus>
+                <button id="submit">Go!</button>
+            </form>
+            <output class="error-output"></output>
+            <output class="weather-output"></output>
+        </div>
     </div>
 
     {{>footer}}
-
+    <script defer src="js/app.js"></script>
 </body>
 
 </html>
