@@ -1,0 +1,15 @@
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+
+    .help-info {
+        margin-top: 3rem;
+        margin-left: 0.75rem;
+        margin-bottom: 0.5rem;
+        width: 92%;
+
+        @media #{$min-480} {
+            margin-left: 1.25rem;
+        }
+    }
+}
