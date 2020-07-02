@@ -1,6 +1,5 @@
 const request = require('request')
-const env = require('../../config/env')
-const access_key = process.env.ACCESS_KEY || env.ACCESS_KEY
+const access_key = process.env.ACCESS_KEY
 
 const forecast = (lat, lon, callback) => {
     const url = `http://api.weatherstack.com/current?access_key=${access_key}&query=${lat},${lon}&type=LatLon&units=f`

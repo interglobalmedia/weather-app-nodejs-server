@@ -1,6 +1,5 @@
 const request = require('request')
-const env = require('../../config/env')
-const access_token = process.env.ACCESS_TOKEN || env.ACCESS_TOKEN
+const access_token = process.env.ACCESS_TOKEN
 
 const geocode = (address, callback) => {
     const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${access_token}&limit=1`
