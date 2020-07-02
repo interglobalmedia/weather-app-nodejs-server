@@ -1,5 +1,5 @@
 const request = require('request')
-const env = require('../config/env')
+const env = require('../../config/env')
 const access_key = process.env.ACCESS_KEY || env.ACCESS_KEY
 
 const forecast = (lat, lon, callback) => {

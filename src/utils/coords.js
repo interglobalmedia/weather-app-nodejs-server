@@ -1,5 +1,5 @@
 const request = require('request')
-const env = require('../config/env')
+const env = require('../../config/env')
 const access_token = process.env.ACCESS_TOKEN || env.ACCESS_TOKEN
 
 const coords = (latitude, longitude, callback) => {
