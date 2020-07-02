@@ -1,8 +1,9 @@
 const request = require('request')
 const env = require('../config/env')
+const access_key = process.env.ACCESS_KEY || env.ACCESS_KEY
 
 const forecast = (lat, lon, callback) => {
-    const url = `http://api.weatherstack.com/current?access_key=${env.ACCESS_KEY}&query=${lat},${lon}&type=LatLon&units=f`
+    const url = `http://api.weatherstack.com/current?access_key=${access_key}&query=${lat},${lon}&type=LatLon&units=f`
     request({ url, json: true }, (error, { body }) => {
         if (error) {
             callback(`Unable to connect to location services.`, undefined)

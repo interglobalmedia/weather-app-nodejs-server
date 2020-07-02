@@ -1,8 +1,9 @@
 const request = require('request')
 const env = require('../config/env')
+const access_token = process.env.ACCESS_TOKEN || env.ACCESS_TOKEN
 
 const coords = (latitude, longitude, callback) => {
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${latitude},${longitude}.json?types=poi&access_token=${env.ACCESS_TOKEN}&limit=1`
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${latitude},${longitude}.json?types=poi&access_token=${access_token}&limit=1`
     request({ url, json: true }, (error, { body }) => {
         if (error) {
             callback(`Unable to connect to location services.`, undefined)
