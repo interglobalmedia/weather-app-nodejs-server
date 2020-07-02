@@ -2,11 +2,11 @@
     "name": "web-server",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "src/server.js",
     "scripts": {
         "dev": "nodemon server -e js,hbs",
         "scss": "node-sass --watch styles/scss/ -o public/styles/css/",
-        "start": "node server.js"
+        "start": "node src/server.js"
     },
     "author": "Maria D. Campbell",
     "license": "ISC",

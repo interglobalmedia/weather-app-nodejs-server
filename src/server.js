@@ -7,10 +7,10 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 // set up static directory to serve
-const publicDirectoryPath = path.join(__dirname, 'public')
+const publicDirectoryPath = path.join(__dirname, '../public')
 // set up view engine directory
-const viewsPath = path.join(__dirname, 'templates')
-const partialsPath = path.join(__dirname, 'templates/partials')
+const viewsPath = path.join(__dirname, '../templates')
+const partialsPath = path.join(__dirname, '../templates/partials')
 
 app.set('views', viewsPath)
 app.set('view engine', 'hbs')
