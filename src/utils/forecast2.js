@@ -1,4 +1,5 @@
 const request = require('request')
+require('dotenv').config()
 const access_key = process.env.ACCESS_KEY
 
 const nyForecast = (address, callback) => {

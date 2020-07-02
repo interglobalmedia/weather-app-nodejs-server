@@ -1,4 +1,5 @@
 const request = require('request')
+require('dotenv').config()
 const access_token = process.env.ACCESS_TOKEN
 
 const coords = (latitude, longitude, callback) => {
