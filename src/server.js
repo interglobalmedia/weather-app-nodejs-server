@@ -1,9 +1,8 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const env = require('../config/env')
 const app = express()
-const port = env.PORT || 3000
+const port = process.env.PORT || 3000
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
