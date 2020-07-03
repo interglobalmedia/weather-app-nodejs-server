@@ -50,13 +50,16 @@ body {
   .footer-wrapper .site-footer {
     text-align: center; }
 
+.about-info {
+  width: 95%;
+  margin: 0 auto; }
+
 .about-image {
-  width: 100%;
-  max-width: 250px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  width: 95%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  text-align: center;
+  display: block; }
 
 .wrapper {
   margin: 0 auto;

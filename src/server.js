@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 // about route
 app.get('/about', (req, res) => [
     res.render('pages/about', {
-        title: 'About me',
+        title: 'About',
         name: 'Maria D Campbell',
     }),
 ])
