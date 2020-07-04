@@ -13,7 +13,7 @@ const forecast = (lat, lon, callback) => {
         } else {
             callback(
                 undefined,
-                `The current weather condition is ${body.current.weather_descriptions}, and ${body.current['temperature']}∘. It feels like ${body.current.feelslike}∘. The humidity is ${body.current.humidity}%.`
+                `The local date and 24-hour clock time is ${body.location.localtime}. The current weather condition is ${body.current.weather_descriptions}, and ${body.current['temperature']}∘. It feels like ${body.current.feelslike}∘. The humidity is ${body.current.humidity}%.`
             )
         }
     })
