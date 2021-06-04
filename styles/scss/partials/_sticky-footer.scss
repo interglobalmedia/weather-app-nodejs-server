@@ -19,7 +19,7 @@
 .Site-content:after {
     content: '\00a0';
     display: block;
-    margin-top: var(--space);
     height: 0;
+    margin-top: var(--space);
     visibility: hidden;
 }

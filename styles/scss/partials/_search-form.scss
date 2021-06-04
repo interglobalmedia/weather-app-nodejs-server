@@ -18,11 +18,11 @@
     }
 
     input#weather-input {
-        width: 82%;
         height: 1.75rem;
         margin-left: 0.75rem;
-        padding: 0.5rem;
         outline: none;
+        padding: 0.5rem;
+        width: 82%;
 
         @media #{$min-480} {
             margin-left: 1.25rem;
@@ -30,20 +30,19 @@
     }
 
     button {
-        height: 1.75rem;
-        cursor: pointer;
         background: rgba(235, 235, 235, 1);
-        color: black;
         border: 1px solid black;
-        ;
+        border-radius: 3px;
+        color: black;
+        cursor: pointer;
+        height: 1.75rem;
         padding: 5px;
         text-align: center;
-        border-radius: 3px;
 
         &:focus,
         &:active {
-            color: rgba(235, 235, 235, 1);
             background: #765bff;
+            color: rgba(235, 235, 235, 1);
         }
     }
 
@@ -54,8 +53,8 @@
         .error-result {
             margin: 0 auto;
             padding-left: 0.75rem;
-            padding-top: 0.5rem;
             padding-right: 1.5rem;
+            padding-top: 0.5rem;
 
             @media #{$min-480} {
                 padding-left: 1.5rem;

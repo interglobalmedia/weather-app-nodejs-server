@@ -1,12 +1,12 @@
 .header-nav {
-    margin: 1.5rem auto;
     display: flex;
     justify-content: space-between;
+    margin: 1.5rem auto;
     width: 95%;
 
     .logo-wrapper {
-        font-size: 1.3rem;
         color: rgba(118, 91, 255, 1);
+        font-size: 1.3rem;
     }
 
     a {

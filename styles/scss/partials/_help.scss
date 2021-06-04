@@ -3,9 +3,9 @@
     width: 100%;
 
     .help-info {
-        margin-top: 3rem;
-        margin-left: 0.75rem;
         margin-bottom: 0.5rem;
+        margin-left: 0.75rem;
+        margin-top: 3rem;
         width: 92%;
 
         @media #{$min-480} {

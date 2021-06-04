@@ -9,13 +9,13 @@ body {
   font-family: 'Overpass', sans-serif; }
 
 .header-nav {
-  margin: 1.5rem auto;
   display: flex;
   justify-content: space-between;
+  margin: 1.5rem auto;
   width: 95%; }
   .header-nav .logo-wrapper {
-    font-size: 1.3rem;
-    color: #765bff; }
+    color: #765bff;
+    font-size: 1.3rem; }
   .header-nav a {
     color: #ff00ad;
     margin-right: 0.75rem; }
@@ -40,8 +40,8 @@ body {
 .Site-content:after {
   content: '\00a0';
   display: block;
-  margin-top: var(--space);
   height: 0;
+  margin-top: var(--space);
   visibility: hidden; }
 
 .footer-wrapper {
@@ -50,16 +50,69 @@ body {
   .footer-wrapper .site-footer {
     text-align: center; }
 
-.about-info {
-  width: 95%;
-  margin: 0 auto; }
+.about-info-wrapper {
+  align-items: center;
+  grid-auto-rows: 1fr;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  width: 90%; }
+  .about-info-wrapper .about-info {
+    width: 55%;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: center; }
+    @media (max-width: 599px) {
+      .about-info-wrapper .about-info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        float: none;
+        justify-content: center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        width: 100%; } }
+  .about-info-wrapper figure {
+    clip-path: circle(75% at 50% 50%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    shape-image-threshold: 0.5;
+    shape-outside: circle(75% at 50% 50%);
+    width: 100%; }
+    .about-info-wrapper figure > img {
+      border-radius: 50%;
+      float: left;
+      height: 50%;
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%) border-box;
+      margin-left: 1.5rem;
+      width: 48%; }
+      @media (max-width: 599px) {
+        .about-info-wrapper figure > img {
+          float: none;
+          height: 62%;
+          margin-right: auto;
+          margin-left: auto;
+          width: 60%; } }
+    .about-info-wrapper figure .about-image {
+      animation: clip 1s infinite;
+      clip-path: polygon(100% 50%, 84.70057% 54.56842%, 91.05185% 60.99981%, 82.33578% 63.39392%, 93.30127% 75%, 77.76737% 71.30665%, 80.05204% 80.05204%, 71.30665% 77.76737%, 75% 93.30127%, 63.39392% 82.33578%, 60.99981% 91.05185%, 54.56842% 84.70057%, 50% 100%, 45.43158% 84.70057%, 39.00019% 91.05185%, 36.60608% 82.33578%, 25% 93.30127%, 28.69335% 77.76737%, 19.94796% 80.05204%, 22.23263% 71.30665%, 6.69873% 75%, 17.66422% 63.39392%, 8.94815% 60.99981%, 15.29943% 54.56842%, 0% 50%, 15.29943% 45.43158%, 8.94815% 39.00019%, 17.66422% 36.60608%, 6.69873% 25%, 22.23263% 28.69335%, 19.94796% 19.94796%, 28.69335% 22.23263%, 25% 6.69873%, 36.60608% 17.66422%, 39.00019% 8.94815%, 45.43158% 15.29943%, 50% 0%, 54.56842% 15.29943%, 60.99981% 8.94815%, 63.39392% 17.66422%, 75% 6.69873%, 71.30665% 22.23263%, 80.05204% 19.94796%, 77.76737% 28.69335%, 93.30127% 25%, 82.33578% 36.60608%, 91.05185% 39.00019%, 84.70057% 45.43158%); }
 
-.about-image {
-  width: 95%;
-  max-width: 600px;
-  margin: 1.5rem auto;
-  text-align: center;
-  display: block; }
+@keyframes clip {
+  0% {
+    clip-path: polygon(100% 50%, 84.70057% 54.56842%, 91.05185% 60.99981%, 82.33578% 63.39392%, 93.30127% 75%, 77.76737% 71.30665%, 80.05204% 80.05204%, 71.30665% 77.76737%, 75% 93.30127%, 63.39392% 82.33578%, 60.99981% 91.05185%, 54.56842% 84.70057%, 50% 100%, 45.43158% 84.70057%, 39.00019% 91.05185%, 36.60608% 82.33578%, 25% 93.30127%, 28.69335% 77.76737%, 19.94796% 80.05204%, 22.23263% 71.30665%, 6.69873% 75%, 17.66422% 63.39392%, 8.94815% 60.99981%, 15.29943% 54.56842%, 0% 50%, 15.29943% 45.43158%, 8.94815% 39.00019%, 17.66422% 36.60608%, 6.69873% 25%, 22.23263% 28.69335%, 19.94796% 19.94796%, 28.69335% 22.23263%, 25% 6.69873%, 36.60608% 17.66422%, 39.00019% 8.94815%, 45.43158% 15.29943%, 50% 0%, 54.56842% 15.29943%, 60.99981% 8.94815%, 63.39392% 17.66422%, 75% 6.69873%, 71.30665% 22.23263%, 80.05204% 19.94796%, 77.76737% 28.69335%, 93.30127% 25%, 82.33578% 36.60608%, 91.05185% 39.00019%, 84.70057% 45.43158%); }
+  50% {
+    clip-path: polygon(84.70057% 54.56842%, 91.05185% 60.99981%, 82.33578% 63.39392%, 93.30127% 75%, 77.76737% 71.30665%, 80.05204% 80.05204%, 71.30665% 77.76737%, 75% 93.30127%, 63.39392% 82.33578%, 60.99981% 91.05185%, 54.56842% 84.70057%, 50% 100%, 45.43158% 84.70057%, 39.00019% 91.05185%, 36.60608% 82.33578%, 25% 93.30127%, 28.69335% 77.76737%, 19.94796% 80.05204%, 22.23263% 71.30665%, 6.69873% 75%, 17.66422% 63.39392%, 8.94815% 60.99981%, 15.29943% 54.56842%, 0% 50%, 15.29943% 45.43158%, 8.94815% 39.00019%, 17.66422% 36.60608%, 6.69873% 25%, 22.23263% 28.69335%, 19.94796% 19.94796%, 28.69335% 22.23263%, 25% 6.69873%, 36.60608% 17.66422%, 39.00019% 8.94815%, 45.43158% 15.29943%, 50% 0%, 54.56842% 15.29943%, 60.99981% 8.94815%, 63.39392% 17.66422%, 75% 6.69873%, 71.30665% 22.23263%, 80.05204% 19.94796%, 77.76737% 28.69335%, 93.30127% 25%, 82.33578% 36.60608%, 91.05185% 39.00019%, 84.70057% 45.43158%, 100% 50%); }
+  100% {
+    clip-path: polygon(91.05185% 60.99981%, 82.33578% 63.39392%, 93.30127% 75%, 77.76737% 71.30665%, 80.05204% 80.05204%, 71.30665% 77.76737%, 75% 93.30127%, 63.39392% 82.33578%, 60.99981% 91.05185%, 54.56842% 84.70057%, 50% 100%, 45.43158% 84.70057%, 39.00019% 91.05185%, 36.60608% 82.33578%, 25% 93.30127%, 28.69335% 77.76737%, 19.94796% 80.05204%, 22.23263% 71.30665%, 6.69873% 75%, 17.66422% 63.39392%, 8.94815% 60.99981%, 15.29943% 54.56842%, 0% 50%, 15.29943% 45.43158%, 8.94815% 39.00019%, 17.66422% 36.60608%, 6.69873% 25%, 22.23263% 28.69335%, 19.94796% 19.94796%, 28.69335% 22.23263%, 25% 6.69873%, 36.60608% 17.66422%, 39.00019% 8.94815%, 45.43158% 15.29943%, 50% 0%, 54.56842% 15.29943%, 60.99981% 8.94815%, 63.39392% 17.66422%, 75% 6.69873%, 71.30665% 22.23263%, 80.05204% 19.94796%, 77.76737% 28.69335%, 93.30127% 25%, 82.33578% 36.60608%, 91.05185% 39.00019%, 84.70057% 45.43158%, 100% 50%, 84.70057% 54.56842%); } }
 
 .wrapper {
   margin: 0 auto;
@@ -75,34 +128,34 @@ body {
   .wrapper form#submit {
     width: 100%; }
   .wrapper input#weather-input {
-    width: 82%;
     height: 1.75rem;
     margin-left: 0.75rem;
+    outline: none;
     padding: 0.5rem;
-    outline: none; }
+    width: 82%; }
     @media (min-width: 480px) {
       .wrapper input#weather-input {
         margin-left: 1.25rem; } }
   .wrapper button {
-    height: 1.75rem;
-    cursor: pointer;
     background: #ebebeb;
-    color: black;
     border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    height: 1.75rem;
     padding: 5px;
-    text-align: center;
-    border-radius: 3px; }
+    text-align: center; }
     .wrapper button:focus, .wrapper button:active {
-      color: #ebebeb;
-      background: #765bff; }
+      background: #765bff;
+      color: #ebebeb; }
   .wrapper .weather-output .weather-result,
   .wrapper .weather-output .error-result,
   .wrapper .error-output .weather-result,
   .wrapper .error-output .error-result {
     margin: 0 auto;
     padding-left: 0.75rem;
-    padding-top: 0.5rem;
-    padding-right: 1.5rem; }
+    padding-right: 1.5rem;
+    padding-top: 0.5rem; }
     @media (min-width: 480px) {
       .wrapper .weather-output .weather-result,
       .wrapper .weather-output .error-result,
@@ -120,9 +173,9 @@ body {
   margin: 0 auto;
   width: 100%; }
   .wrapper .help-info {
-    margin-top: 3rem;
-    margin-left: 0.75rem;
     margin-bottom: 0.5rem;
+    margin-left: 0.75rem;
+    margin-top: 3rem;
     width: 92%; }
     @media (min-width: 480px) {
       .wrapper .help-info {

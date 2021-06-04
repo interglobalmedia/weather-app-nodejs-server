@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => [
     res.render('pages/about', {
         title: 'About',
-        name: 'Maria D Campbell',
+        name: 'Maria D. Campbell',
     }),
 ])
 // help route

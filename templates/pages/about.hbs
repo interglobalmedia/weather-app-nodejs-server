@@ -4,15 +4,17 @@
 {{>head}}
 
 <body class="Site">
-<div class="Site-content">
-    {{>header}}
-    <div class="about-info-wrapper">
-        <p class="about-info">This site was created by {{name}}. It uses geolocation data retrieved from the mapbox.com
-            API and forecast data from the weatherstack.com API.</p>
-        <img class="about-image" src="./img/F_SHARPER_VERSION_OF_D.jpg" alt="Image of Maria">
+    <div class="Site-content">
+        {{>header}}
+        <div class="about-info-wrapper">
+            <figure>
+                <img class="about-image" src="./img/F_SHARPER_VERSION_OF_D.jpg" alt="Image of Maria">
+            </figure>
+            <p class="about-info">
+                This site was created by {{name}}. It uses geolocation data retrieved from the mapbox.com API and forecast data from the weatherstack.com API.
+            </p>
+        </div>
     </div>
-</div>
-</div>
 {{>footer}}
 </body>
 
